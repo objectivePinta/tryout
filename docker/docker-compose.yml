@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  tryout_db:
+    container_name: tryout_db
+    restart: always
+    image: postgres:12.4
+    environment:
+      - POSTGRES_DB=tryout
+      - POSTGRES_USER=tryout
+      - POSTGRES_PASSWORD=tryout
+    ports:
+      - 5432:5432
