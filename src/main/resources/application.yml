@@ -15,6 +15,9 @@ spring:
     open-in-view: ${JPA_OPEN_IN_VIEW:false}
   flyway:
     locations: classpath:db
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 datasource:
   writing:
     url: ${DATABASE_URL:jdbc:postgresql://127.0.0.1:5432/tryout}?reWriteBatchedInserts=true
